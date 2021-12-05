@@ -29,7 +29,6 @@ public class Lector {
         letras = crearArregloLetras();
         frecuencias = crearArregloFrecuencias();
         objetos=crearObjetos();
-        ordenar();
         mostrarObjetos();
     }
 
@@ -88,7 +87,7 @@ public class Lector {
     }
  
     public void ordenar() {
-        int contador = 1;//solo util para contar las comparaciones
+        int contador = 1;
         for (int i = 0; i < objetos.length - 1; i++) {
             int min = i;
             for (int j = i + 1; j < objetos.length; j++) {

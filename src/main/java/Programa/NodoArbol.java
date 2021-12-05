@@ -1,7 +1,7 @@
 package Programa;
 
 public class NodoArbol {
-    int dato;
+    Elemento dato;
     NodoArbol derecha;
     NodoArbol izquierda;
 }

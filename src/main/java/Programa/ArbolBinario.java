@@ -5,14 +5,11 @@ import java.util.Scanner;
 
 public class ArbolBinario {
     NodoArbol raiz = null, aux, padre;
-    int info;
+    Elemento info;
     static Scanner entrada = new Scanner(System.in);
 
-    public void agregar() {
+    public void agregar(Elemento info) {
         try {
-            System.out.println("\nTeclee el nodo a ingresar\n *El nodo debe ser un número entero");
-            info = Integer.parseInt(entrada.nextLine());
-
             NodoArbol nuevo = new NodoArbol();
             nuevo.dato = info;
 
@@ -29,8 +26,7 @@ public class ArbolBinario {
                         return;
                     } else {
                         padre = aux;
-
-                        if (info < aux.dato) { //Izquierda, menor a la raiz del �rbol o sub�rbol
+                        if (info.getFrecuencia() < aux.dato.getFrecuencia()) { //Izquierda, menor a la raiz del �rbol o sub�rbol
                             aux = aux.izquierda;
                             if (aux == null) { //La posición del hijo no está ocupada
                                 padre.izquierda = nuevo;
@@ -56,18 +52,14 @@ public class ArbolBinario {
 
     } //Fin de método agregar
 
-    public void buscar() {
+    public void buscar(Elemento info) {
         try {
-            System.out.println("\nTeclee el nodo a buscar");
-            info = Integer.parseInt(entrada.nextLine());
-
             aux = raiz;
-
             if (aux.dato == info) {
                 System.out.println("NODO ENCONTRADO");
             } else {
                 while (true) { //Se realiza retorno cuando se encuentra el dato o el auxiliar no tiene valor
-                    if (info < aux.dato) { //búsqueda en subárbol izquierdo
+                    if (info.getFrecuencia() < aux.dato.getFrecuencia()) { //búsqueda en subárbol izquierdo
                         aux = aux.izquierda;
                         if (aux == null) {
                             System.out.println("NODO NO ENCONTRADO");
@@ -121,7 +113,7 @@ public class ArbolBinario {
 
     }//Fin método postOrden
 
-    public void eliminar(int info) {
+    public void eliminar(Elemento info) {
         Boolean izq = false;
 
         aux = raiz;
@@ -139,7 +131,7 @@ public class ArbolBinario {
             y nos recorremos a la derecha en caso de que
             el objeto buscado sea mayor al del nodo actual
              */
-            if (info < aux.dato) {
+            if (info.getFrecuencia() < aux.dato.getFrecuencia()) {
                 
                 izq = true;
                 aux = aux.izquierda;
@@ -269,4 +261,7 @@ public class ArbolBinario {
         return reemplaza;
     }
 
+    
+    
+    
 }

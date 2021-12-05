@@ -42,4 +42,14 @@ public class Traductor {
         }
         return traduccion;
     }
+
+    public Elemento[] getObjetos() {
+        return objetos;
+    }
+
+    public void setObjetos(Elemento[] objetos) {
+        this.objetos = objetos;
+    }
+    
+    
 }
