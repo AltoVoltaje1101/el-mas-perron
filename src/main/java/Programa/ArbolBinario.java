@@ -1,13 +1,9 @@
-package uabc.arbolesbinarios;
+package Programa;
 
-/**
- *
- * @author Princ
- */
+import Programa.NodoArbol;
 import java.util.Scanner;
 
 public class ArbolBinario {
-
     NodoArbol raiz = null, aux, padre;
     int info;
     static Scanner entrada = new Scanner(System.in);

@@ -1,13 +1,7 @@
 package Programa;
 
-/**
- *
- * @author Princ
- */
 public class NodoArbol {
-
-    dato;
+    int dato;
     NodoArbol derecha;
     NodoArbol izquierda;
-
 }
