@@ -2,21 +2,21 @@
 package Programa;
 
 public class Elemento {
-   private float frecuencia;
+   private int frecuencia;
    private String letra;
    private String morse;
 
-    public Elemento(float frecuencia, String letra, String morse) {
+    public Elemento(int frecuencia, String letra, String morse) {
         this.frecuencia = frecuencia;
         this.letra = letra;
         this.morse = morse;
     }
 
-    public float getFrecuencia() {
+    public int getFrecuencia() {
         return frecuencia;
     }
 
-    public void setFrecuencia(float frecuencia) {
+    public void setFrecuencia(int frecuencia) {
         this.frecuencia = frecuencia;
     }
 
