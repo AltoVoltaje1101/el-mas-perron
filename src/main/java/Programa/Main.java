@@ -20,6 +20,7 @@ public class Main {
       boolean centinela=false;
       for(int i=0;i<v.length;i++){
         arbol.agregar(v[i]);
+        
       }
     }
     
