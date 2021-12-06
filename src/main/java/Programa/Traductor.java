@@ -1,6 +1,8 @@
 package Programa;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Traductor {
 
@@ -8,8 +10,12 @@ public class Traductor {
     private Lector lector;
     String traduccion = "";
 
-    public Traductor() throws IOException {
-        lector = new Lector();
+    public Traductor() {
+        try {
+            lector = new Lector();
+        } catch (IOException ex) {
+            Logger.getLogger(Traductor.class.getName()).log(Level.SEVERE, null, ex);
+        }
         objetos = lector.crearObjetos();
     }
 
@@ -24,6 +30,7 @@ public class Traductor {
                 }
             }
         }
+        
         return traduccion;
     }
 
