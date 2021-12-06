@@ -4,15 +4,8 @@
  */
 package Programa;
 
-import java.awt.Color;
-import java.awt.Image;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import javax.swing.JPanel;
 
 /**
@@ -21,22 +14,15 @@ import javax.swing.JPanel;
  */
 public class DibujoJPanel extends JPanel{
     JPanel fondo;
-    public DibujoJPanel(JPanel panel){
-        fondo = panel;
-        fondo.setBackground(Color.red);
-        ponerFondo();
-        fondo.repaint();
+    Graphics2D grafico;
+    public DibujoJPanel(){
+        
     }
-    public void ponerFondo(){
-        //ImageIcon imagen = new ImageIcon("src\\main\\java\\Imagenes\\fondoPrincipal.jpg");
-        BufferedImage imagen = null;
-        try {
-            imagen = ImageIO.read(new File("src\\main\\java\\Imagenes\\fondoPrincipal.jpg"));
-        } catch (IOException ex) {
-            Logger.getLogger(DibujoJPanel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        if(imagen == )
-        System.out.println("");
-        fondo.getGraphics().drawImage(imagen, 200, 400, this);
+    public void paintComponent(Graphics g) {
+        Graphics2D g2 = (Graphics2D) g;
+    }
+    public void dibujarCirculos(){
+        Graphics a = getGraphics();
+        a.drawLine(50, 50, 200, 200);
     }
 }

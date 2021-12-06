@@ -33,9 +33,7 @@ public class Lector {
     }
 
     public void obtenerDatos() throws IOException {
-        String archivo = "C:\\Users\\Dioba\\OneDrive\\Documentos\\"
-                + "NetBeansProjects\\ProyectoFinal\\ProyectoFinal\\"
-                + "src\\main\\java\\Archivos\\codigoMorse.txt";
+        String archivo = "src\\main\\java\\Archivos\\codigoMorse.txt";
         File f = new File(archivo);
         BufferedReader br;
         try {
