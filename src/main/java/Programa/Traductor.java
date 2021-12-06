@@ -11,12 +11,8 @@ public class Traductor {
     String traduccion = "";
 
     public Traductor() {
-        try {
-            lector = new Lector();
-        } catch (IOException ex) {
-            Logger.getLogger(Traductor.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        objetos = lector.crearObjetos();
+        lector = new Lector();
+        objetos = lector.getObjetos();
     }
 
     public String traducirEspañol(String dato) {

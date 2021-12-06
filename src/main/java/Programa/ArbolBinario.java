@@ -49,7 +49,7 @@ public class ArbolBinario {
         } catch (NumberFormatException e) {
             System.out.println("\nERROR\nEl árbol solo trabaja con n�meros enteros");
         }
-
+        
     } //Fin de método agregar
 
     public void buscar(Elemento info) {

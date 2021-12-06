@@ -20,17 +20,21 @@ public class Lector {
     private ArrayList<String> apoyoLetras;
     private ArrayList<String> apoyoFrecuencias;
 
-    public Lector() throws IOException {
+    public Lector() {
         apoyoMorse = new ArrayList();
         apoyoLetras = new ArrayList();
         apoyoFrecuencias = new ArrayList();
         objetos = new Elemento[27];
-        obtenerDatos();
-        /* morse = crearArregloMorse();
-        letras = crearArregloLetras();
-        frecuencias = crearArregloFrecuencias();
-        objetos=crearObjetos();
-        mostrarObjetos();*/
+        try {
+            obtenerDatos();
+            /* morse = crearArregloMorse();
+            letras = crearArregloLetras();
+            frecuencias = crearArregloFrecuencias();
+            objetos=crearObjetos();
+            mostrarObjetos();*/
+        } catch (IOException ex) {
+            Logger.getLogger(Lector.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public void obtenerDatos() throws IOException {
@@ -80,6 +84,9 @@ public class Lector {
 
     }
 
+    public Elemento[] getObjetos(){
+        return objetos;
+    }
     /*
     public String[] crearArregloLetras() {
         String[] aux = new String[apoyoLetras.size()];
@@ -104,7 +111,7 @@ public class Lector {
         }
         return aux;
     }*/
-
+/*
     public Elemento[] crearObjetos() {
         Elemento[] aux = new Elemento[letras.length];
         Elemento e;

@@ -13,10 +13,12 @@ public class Principal {
     
     private Traductor traductor;
     private ArbolBinario arbol;
+    private Lector lector;
 
     public Principal(){
-            traductor = new Traductor();
+       traductor = new Traductor();
        arbol= new ArbolBinario();
+       lector = new Lector();
     }
 
     public void crearArbol(){
@@ -29,7 +31,9 @@ public class Principal {
         arbol.agregar(v[i]);
       }
     }
-    
+    public void buscarString(String cadena){
+        
+    }
     public void simon(){
         crearArbol();
         arbol.preOrden(arbol.raiz);
